@@ -1,0 +1,212 @@
+<But1@MDFillRoundFlatButton>:
+    font_size: '34sp'
+    md_bg_color: '#363835'
+    text_color: '#f6faf5'
+
+
+<But2@MDFloatingActionButton>:
+    icon_size: '35sp'
+    md_bg_color: '#d46c0b'
+
+
+<Container>:
+    rows: 3
+    text_inp: text_inp
+    zero: zero
+    one: one
+    two: two
+    three: three
+    four: four
+    five: five
+    six: six
+    seven: seven
+    eight: eight
+    nine: nine
+    add: add
+    sub: sub
+    div: div
+    mul: mul
+    per: per
+    pow: pow
+    sqr: sqr
+    fact: fact
+
+    AnchorLayout:
+        anchor_y: 'top'
+        size_hint: 1, 0.1
+
+        MDLabel:
+            id: text_inp
+            text: ''
+            text_size: '35sp'
+            font_size: '35sp'
+            multiline: False
+
+    GridLayout:
+        cols: 5
+        padding:[10, 0, 0, 10]
+
+        BoxLayout:
+            orientation: 'vertical'
+            spacing: '10sp'
+
+            But1:
+                text: "7"
+                id: seven
+                on_release:
+                    root.sevens()
+
+            But1:
+                text: "4"
+                id: four
+                on_release:
+                    root.fours()
+
+            But1:
+                text: "1"
+                id: one
+                on_release:
+                    root.ones()
+
+            But1:
+                text: "0"
+                id: zero
+                on_release:
+                    root.zeros()
+
+        BoxLayout:
+            orientation: 'vertical'
+            spacing: '10sp'
+
+            But1:
+                text: "8"
+                id: eight
+                on_release:
+                    root.eights()
+
+            But1:
+                text: "5"
+                id: five
+                on_release:
+                    root.fives()
+
+            But1:
+                text: "2"
+                id: two
+                on_release:
+                    root.twos()
+
+            But1:
+                text: "."
+                id: point
+                on_release:
+                    root.points()
+
+        BoxLayout:
+            orientation: 'vertical'
+            spacing: '10sp'
+
+            But1:
+                text: "9"
+                id: nine
+                on_release:
+                    root.nines()
+
+            But1:
+                text: "6"
+                id: six
+                on_release:
+                    root.sixs()
+
+            But1:
+                text: "3"
+                id: three
+                on_release:
+                    root.threes()
+
+            But1:
+                md_bg_color: '#a6a29f'
+                text_color: 'black'
+                text: 'AC'
+                id: ac
+                on_release:
+                    root.clear()
+
+        BoxLayout:
+            orientation: 'vertical'
+            spacing: '10sp'
+
+            But2:
+                icon: 'ico/mul.png'
+                id: mul
+                on_release:
+                    root.muls()
+
+            But2:
+                icon: 'ico/div.png'
+                id: div
+                on_release:
+                    root.divs()
+
+            But2:
+                icon: 'ico/add.png'
+                id: add
+                on_release:
+                    root.adds()
+
+            But2:
+                icon: 'ico/sub.png'
+                id: sub
+                on_release:
+                    root.subs()
+
+
+        BoxLayout:
+            orientation: 'vertical'
+            spacing: '10sp'
+
+            But2:
+                icon: 'ico/sqr.png'
+                id: sqr
+                on_release:
+                    root.sqrs()
+
+            But2:
+                icon: 'ico/pow.png'
+                id: pow
+                on_release:
+                    root.pows()
+
+            But2:
+                icon: 'ico/fact.png'
+                id: fact
+                on_release:
+                    root.facts()
+
+            But2:
+                icon: 'ico/per.png'
+                id: per
+                on_release:
+                    root.pers()
+
+    BoxLayout:
+        size_hint: 1, 0.2
+        padding: [10, 0, 10, 10]
+        haling: 'middle'
+
+        But2:
+            icon: 'ico/eq.png'
+            size_hint: 1, 1
+            on_release:
+                root.res_fin()
+
+
+
+
+
+
+
+
+
+
+
